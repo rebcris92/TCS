@@ -17,5 +17,6 @@ env:
     - CPPCHECK=ON
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
+  - sudo apt-get install -qq cppcheck
 script:
-  - make test
+  - make test 
