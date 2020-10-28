@@ -18,5 +18,5 @@ env:
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 script:
-  - ./teste.sh
+  - chmod +X teste.sh ; ./teste.sh
 #  - make test
