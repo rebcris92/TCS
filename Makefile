@@ -6,8 +6,9 @@ GCC = gcc
 
 all: $(ALL)
 
-identifier: identifier.c
-	$(GCC) $(GCCFLAGS) -o $@ $@.c
+identifier:
+	cd Identifier
+	make
 
 cov: identifier.c
 	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o gcov identifier.c
