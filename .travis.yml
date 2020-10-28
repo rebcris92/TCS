@@ -12,6 +12,11 @@ addons:
       - gcc
       - valgrid
       - cppcheck
+env:
+  global:
+    - VALGRIND=ON
+    - GCOV=ON
+    - CPPCHECK=ON
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 script:
