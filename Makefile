@@ -13,6 +13,8 @@ cov: identifier.c
 	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o gcov identifier.c
 
 clean:
+	rm -rf *.o cov* *.dSYM *.gcda *.gcno *.gcov
+	cd Identifier/
 	rm -fr *.o cov* *.dSYM *.gcda *.gcno *.gcov
 
 test:

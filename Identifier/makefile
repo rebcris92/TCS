@@ -41,6 +41,9 @@ CFLAGS += -Wno-unknown-pragmas
 CFLAGS += -Wstrict-prototypes
 CFLAGS += -Wundef
 CFLAGS += -Wold-style-definition
+CFLAGS += -fprofile-arcs
+CFLAGS += -ftest-coverage
+CFLAGS += -fsanitize=address
 
 TARGET_BASE1=all_tests
 TARGET1 = $(TARGET_BASE1)$(TARGET_EXTENSION)
@@ -54,7 +57,7 @@ SRC_FILES1=\
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
 
-all: clean compile run
+all: clean cppcheck compile run cov
 
 compile:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
@@ -63,7 +66,16 @@ run:
 	- ./$(TARGET1) -v
 
 clean:
-	$(CLEANUP) $(TARGET1)
+	rm -fr *.o cov* *.dSYM *.gcda *.gcno *.gcov $(TARGET1)
+
+cov: 
+	- gcov -b identifier.c
+
+cppcheck:
+	- cppcheck *
+
+valgrind:
+	- valgrind --leak-check=full ./$(TARGET1) -v
 
 ci: CFLAGS += -Werror
 ci: compile
