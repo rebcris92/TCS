@@ -10,7 +10,7 @@ identifier: identifier.c
 	$(GCC) $(GCCFLAGS) -o $@ $@.c
 
 cov: identifier.c
-	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o gcov identifier.c
 
 clean:
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov

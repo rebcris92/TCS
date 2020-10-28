@@ -10,8 +10,10 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - gcc
+      - valgrid
+      - cppcheck
 install:
   - "[ $GCC = gcc ] && export GCC=gcc || true"
 script:
-  - make
+  - ./teste.sh
 #  - make test
