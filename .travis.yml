@@ -10,8 +10,6 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - gcc
-      - valgrid
-      - cppcheck
 env:
   global:
     - VALGRIND=ON
