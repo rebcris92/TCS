@@ -57,7 +57,7 @@ SRC_FILES1=\
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
 
-all: clean cppcheck compile run cov
+all: clean cppcheck compile run cov valgrind
 
 compile:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)

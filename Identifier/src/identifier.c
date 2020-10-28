@@ -24,8 +24,6 @@ int valid_f(char ch) {
 
 int identifier(char *vet) {
   char achar;
-  float *seila;
-  seila = 20;
   int  length, valid_id;
   length = 0;
   printf("Identificador: ");
