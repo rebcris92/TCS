@@ -43,3 +43,11 @@ TEST(Identifier, Test4) //Test if the function doesn't returns null
   out = identifier(vetor);
   TEST_ASSERT_EQUAL_INT(out,1);
 }
+
+TEST(Identifier, Test5) //Test if the function doesn't returns null
+{
+  char vetor[7] = "jaaaaaa";
+  int out;
+  out = identifier(vetor);
+  TEST_ASSERT_EQUAL_INT(out,1);
+}
