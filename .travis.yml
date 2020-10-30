@@ -20,4 +20,4 @@ install:
   - sudo apt-get install -qq cppcheck
   - sudo apt-get install -qq valgrind
 script:
-  - make test 
+  - make
