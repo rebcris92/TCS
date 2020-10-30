@@ -62,7 +62,7 @@ SRC_FILES1=\
 INC_DIRS=-I$(IDENTIFIER_ROOT)/src -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
 
-all: clean cppcheck valgrind identifier cov santizer
+all: clean cppcheck valgrind cov santizer identifier
 
 compile:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
