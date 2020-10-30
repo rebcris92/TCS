@@ -2,12 +2,13 @@
 #include <string.h>
 #include "identifier.h"
 
-int main(){
+int main(int argc, char *argv[]){
   char vetor[20];
-  memset(vetor,0xaa,sizeof vetor);
   int outa = -1;
-  printf("Identificador: ");
-  scanf("%s"  ,vetor);
+  memset(vetor,0xaa,sizeof vetor);
+  strcpy(vetor,argv[1]);
+
+  printf("\tIdentificador: %s\n", vetor);
   outa = identifier(vetor);
-  return outa;
+  return 0;
 }

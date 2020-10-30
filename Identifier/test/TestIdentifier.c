@@ -14,7 +14,7 @@ TEST_TEAR_DOWN(Identifier)
 
 TEST(Identifier, Test1) //Test if the function doesn't returns null
 {
-  char vetor[20] = "seila\n";
+  char vetor[20] = "seila";
   int out;
   out = identifier(vetor);
   TEST_ASSERT_EQUAL_INT(out,0);
@@ -22,7 +22,7 @@ TEST(Identifier, Test1) //Test if the function doesn't returns null
 
 TEST(Identifier, Test2) //Test if the function doesn't returns null
 {
-  char vetor[20] = "4ola\n";
+  char vetor[20] = "4ola";
   int out;
   out = identifier(vetor);
   TEST_ASSERT_EQUAL_INT(out,1);
@@ -30,7 +30,7 @@ TEST(Identifier, Test2) //Test if the function doesn't returns null
 
 TEST(Identifier, Test3) //Test if the function doesn't returns null
 {
-  char vetor[20] = "batata\n";
+  char vetor[20] = "batata";
   int out;
   out = identifier(vetor);
   TEST_ASSERT_EQUAL_INT(out,1);
@@ -38,15 +38,7 @@ TEST(Identifier, Test3) //Test if the function doesn't returns null
 
 TEST(Identifier, Test4) //Test if the function doesn't returns null
 {
-  char vetor[20] = "jaa$\n";
-  int out;
-  out = identifier(vetor);
-  TEST_ASSERT_EQUAL_INT(out,1);
-}
-
-TEST(Identifier, Test5) //Test if the function doesn't returns null
-{
-  char vetor[7] = "jaaaaaa";
+  char vetor[20] = "jaa$";
   int out;
   out = identifier(vetor);
   TEST_ASSERT_EQUAL_INT(out,1);

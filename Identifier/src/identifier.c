@@ -22,6 +22,7 @@ int valid_f(char ch) {
 }
 
 int identifier(char *vet) {
+  //printf("\tIdentificador: %s\n", vet);
   char achar = 0;
   int  length = 0, valid_id = -1;
   achar = vet[length];
@@ -30,10 +31,11 @@ int identifier(char *vet) {
     length = 1;
   }
   achar = vet[length];
-  while(achar != '\n') {
+  while(achar != '\0') {
     if(!(valid_f(achar))) {
       valid_id = 0;
     }
+
     length++;
     achar = vet[length];
   }
