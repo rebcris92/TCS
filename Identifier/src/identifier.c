@@ -40,11 +40,11 @@ int identifier(char *vet) {
     achar = vet[length];
   }
   if (valid_id && (length >= 1) && (length < 6)) {
-    printf("Valido\n");
+    //printf("Valido\n");
     return 0;
   }
   else {
-    printf("Invalido\n");
+    //printf("Invalido\n");
     return 1;
   }
 }

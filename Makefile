@@ -85,7 +85,7 @@ cppcheck:
 
 valgrind:
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
-	- valgrind --leak-check=full --error-exitcode=1 ./$(TARGET1)
+	- valgrind --leak-check=full --error-exitcode=1 ./$(TARGET1) -q
 
 identifier:
 	$(C_COMPILER) $(CFLAGS) -I$(IDENTIFIER_ROOT)/src $(IDENTIFIER_ROOT)/src/identifier.c main.c -o $(TARGET2)
