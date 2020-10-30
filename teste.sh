@@ -1,3 +1,3 @@
-valgrind --leak-check=full ./identifier.out <<<"hello"
+valgrind --leak-check=full ./identifier.out <<<"hell\n"
 cd Identifier
 make
