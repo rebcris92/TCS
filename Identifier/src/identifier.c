@@ -6,7 +6,6 @@
 // ----------------------------------------------------------------
 
 #include <stdio.h>
-#include "identifier.h"
 
 int valid_s(char ch) {
   if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
@@ -23,10 +22,8 @@ int valid_f(char ch) {
 }
 
 int identifier(char *vet) {
-  char achar;
-  int  length, valid_id;
-  length = 0;
-  printf("Identificador: ");
+  char achar = 0;
+  int  length = 0, valid_id = -1;
   achar = vet[length];
   valid_id = valid_s(achar);
   if(valid_id) {
@@ -49,4 +46,3 @@ int identifier(char *vet) {
     return 1;
   }
 }
-
